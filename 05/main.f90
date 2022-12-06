@@ -2,7 +2,6 @@ program aoc_05
     implicit none
 
     character :: crates(9,0:999)=''
-    character(len=20) :: thisMove(6)
     integer :: i,ierr=0,level=0,moves=0,movement(3,999)=0,stack(9)
 
     call parse
@@ -18,6 +17,8 @@ program aoc_05
     contains
 
     subroutine parse
+
+      character(len=20) :: thisMove(6)
 
       ! Parse craters like [P] [B] [B] [P] [Q] [S] [L] [H] [B]
       open(1,file='input.txt')
